@@ -1,0 +1,155 @@
+/* profile.css */
+@font-face {
+    font-family: 'Co Headline Trial Regular';
+    src: url('/static/servey/fonts/CoHeadlineTrialRegular.otf') format('opentype');
+
+}
+
+@font-face {
+    font-family: 'Co Headline Trial Bold';
+    src: url('/static/servey/fonts/CoHeadLine_Trial_Bd.ttf') format('opentype'); /* Changed from Django template tag */
+}
+
+/* General styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Co Headline Trial Regular', sans-serif;
+    background-color: #003962;
+    background-image: url('/static/servey/images/Background.png');
+}
+
+/* Base styles for the form container */
+.main-container {
+    padding: 20px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.position-relative {
+    position: relative;
+}
+
+.text-layer-image2 {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #0a90cc;
+    font-family: "Co Headline Trial Bold", sans-serif;
+    text-align: center;
+    font-size: 23px !important;
+    background-color: 0a90cc;
+}
+
+.profileForm{
+    font-family: "Co Headline Trial Bold", sans-serif;
+    color: #0a90cc;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 10%;
+}
+
+/* Form styles */
+.form-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 800px;
+    font-family: "Co Headline Trial Bold", sans-serif;
+    color: #0a90cc;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #0a90cc;;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 10px !important;
+        padding: 10px;
+    }
+
+    .form-group.row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group .col-md-6 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .overlay-text {
+        font-size: 1.4rem;
+    }
+
+    .form-container {
+        max-width: 600px;
+        padding: 20px;
+    }
+
+    .form-group .col-md-6 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+}
+
+/* Larger Screens */
+@media (min-width: 1025px) {
+    .overlay-text {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        max-width: 800px;
+        padding: 25px;
+    }
+
+    .form-group .col-md-6 {
+        padding: 0 15px;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+}
