@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'servey/css/style.css' %}"> <!-- Link to the new CSS file -->
+</head>
+<body>
+
+    <div class="container-fluid main-container">
+        <div class="logo-container">
+            <a href="{% url 'home' %}"> <!-- Link to home URL -->
+                <img src="{% static 'servey/images/acwa.png' %}" alt="ACWA Logo" class="logo-large">
+            </a>
+            <img src="{% static 'servey/images/logo.png' %}" alt="Rise Up Logo" class="logo-large">
+        </div>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-column">
+                    <div class="text-overlay-container">
+                        <img src="{% static 'servey/images/text_layer.png' %}" alt="Text Layer" class="text-layer-imagee">
+                        <h2 class="overlayed-textt">Rise Up <br> and Win iPhone 16!</h2> 
+                    </div>
+    
+                    <p class="text-line">Your voice matters. We want to hear your thoughts,
+                        celebrate our collective achievements, and improve
+                        our workplace together. By participating in our
+                        culture survey, you are contributing to something
+                        bigger—a company that listens, learns, and grows.</p>
+                    
+                    <p class="text-line2">How to Enter the iPhone 16 Draw?</p>
+    
+                    <!-- Bullet points -->
+                    <ul class="steps-list">
+                        <li>1. Watch the Achievements Video</li>
+                        <li>2. Share Your Quote</li>
+                    </ul>
+    
+                    <!-- New paragraph for the deadline -->
+                    <p class="survey-deadline">Last day to complete  the culture survey is on Monday 18th October 2024.</p>
+                </div>
+    
+                <div class="col-md-6 image-column">
+                    <div class="image-overlay-container">
+                        <img src="{% static 'servey/images/iphone.png' %}" alt="iPhone 16" class="iphone-image">
+                        <h2 class="overlayed-text-iphone">Enter the<br>iPhone 16 Draw<br>NOW</h2>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of Container --> 
+
+        <!-- New Video Section -->
+        <div class="video-section">
+            <div class="video-overlay-container">
+                <img src="{% static 'servey/images/text_layer.png' %}" alt="Text Layer" class="text-layer-image">
+                <h2 class="overlayed-text-video">Watch the Achievements Video</h2>
+            </div>
+
+            <!-- Video Player -->
+            <video class="video-player" id="achievementsVideo" controls autoplay muted>
+                <source src="{% static 'servey/videos/clip.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Share Quote Button -->
+            <button class="share-quote-button" id="shareQuoteButton" disabled>Share Your Quote</button>
+        </div> <br>
+        <!-- End of Video Section -->
+    
+
+
+
+    </div>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('achievementsVideo');
+            const shareQuoteButton = document.getElementById('shareQuoteButton');
+    
+            // Enable button when video ends
+            video.addEventListener('ended', function() {
+                shareQuoteButton.disabled = false; // Enable the button
+            });
+    
+            // Redirect to profile.html on button click
+            shareQuoteButton.addEventListener('click', function() {
+                window.location.href = "{% url 'profile' %}";  // Ensure this matches your URL routing
+            });
+        });
+    </script>
+</body>
+</html>

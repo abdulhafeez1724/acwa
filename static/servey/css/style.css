@@ -1,0 +1,471 @@
+@font-face {
+    font-family: 'Co Headline Trial Regular';
+    src: url('/static/servey/fonts/CoHeadlineTrialRegular.otf') format('opentype');
+
+}
+
+@font-face {
+    font-family: 'Co Headline Trial Bold';
+    src: url('/static/servey/fonts/CoHeadLine_Trial_Bd.ttf') format('opentype'); /* Changed from Django template tag */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #003962; /* Fallback background color */
+    color: white;
+}
+
+.main-container {
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    background-image: url('/static/servey/images/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding-top: 100px; /* Adjust if needed */
+}
+
+.main-container1 {
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    background-image: url('/static/servey/images/layer1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding-top: 10px; /* Adjust if needed */
+}
+
+.logo-container {
+    position: fixed; /* Fix the logo container at the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    display: flex;
+    justify-content: space-between; /* Space logos to the left and right */
+    align-items: center; /* Align logos vertically */
+    padding: 10px; /* Optional: Add padding to the logo container */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.logo-large {
+    width: 100px; /* Adjust width as needed */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.impact-message,
+.survey-title,
+.thoughts-prompt,
+.confidentiality-notice {
+    font-family: "Co Headline Trial Bold";
+    text-align: center;
+}
+
+.impact-message {
+    font-size: 35px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.survey-title {
+    font-size: 46px;
+    color: #0a90cc;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.survey-titlee {
+    font-size: 40px;
+    color: #0a90cc;
+    font-weight: bold;
+    padding: 20px 0;
+    margin-top: -1px;
+    font-family: "Co Headline Trial Bold";
+}
+
+.thoughts-prompt {
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.confidentiality-notice {
+    font-size: 20px;
+    line-height: 18px;
+    padding-top: 40px;
+}
+
+.action-button {
+    width: 200px;
+    height: 50px;
+    background-color: #0a90cc;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    font-family: "Co Headline Trial Bold";
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Add margin for spacing */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.action-button:hover {
+    background-color: #0b7bbb; /* Change color on hover */
+}
+
+.survey-deadline {
+    font-size: 15px;
+    color: #ffffff;
+    font-family: "Co Headline Trial Bold";
+    text-align: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px; /* Limit the width of the form */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 20px;
+    background-color: #004f7d; /* Slightly lighter background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+    color: #ffffff;
+    font-family: "Co Headline Trial Bold";
+
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    border: none;
+    border-radius: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%; /* Full width */
+}
+
+.form-group textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%; /* Full width */
+    height: 100px; /* Adjust height */
+}
+
+.submit-button {
+    width: 100%;
+    height: 50px;
+    background-color: #0a90cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-family: "Co Headline Trial Bold";
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0b7bbb; /* Change color on hover */
+}
+
+        /* Center the modal content */
+        .modal-content {
+            background: transparent;
+            border: none;
+        }
+
+        /* Center the video in the modal */
+        .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Optional: Full width video */
+        video {
+            max-width: 100%; /* Ensures the video does not overflow */
+            height: auto;    /* Maintains aspect ratio */
+        }
+
+.text-center{
+    font-family: "Co Headline Trial Bold";
+}
+
+
+ /* home page -------------------------------- */
+
+ .text-column {
+    text-align: left;
+    padding-left: 0;
+  }
+  
+  .text-overlay-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .text-layer-imagee {
+    width: 100%; /* Keeps the image full width */
+    height: 120px; /* Set your desired height */
+}
+
+
+  
+  .overlayed-textt {
+    position: absolute;
+    top: 50%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: #0a90cc;
+    font-family: "Co Headline Trial Bold", sans-serif;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .text-line {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f6f6f6;
+    margin: 10px 0;
+    font-family: "Co Headline Trial Bold", sans-serif;
+  }
+
+  .text-line2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: "Co Headline Trial Bold", sans-serif;
+    color: #0a90cc;
+  }
+
+  .steps-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px; /* Space between .text-line2 and the list */
+}
+
+.steps-list li {
+    font-size: 16px;
+    margin: 0; /* Remove gap between the list items */
+    color: #e8eef1;
+    font-family: "Co Headline Trial Bold", sans-serif;
+}
+
+.image-column {
+    text-align: center; /* Center the image within the column */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iphone-image {
+    width: 70%; /* Adjust to match the image size */
+    height: auto;
+}
+
+.image-overlay-container {
+    position: relative;
+    display: inline-block;
+}
+
+.overlayed-text-iphone {
+    position: absolute;
+    top: 70%;  /* Moved slightly down */
+    left: 46%;  /* Moved slightly to the left */
+    transform: translate(-50%, -50%);
+    font-size: 24px;  /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #e8eef1;  /* Adjust text color to stand out */
+    text-align: center;
+    line-height: 1.5;  /* Adjust line height to control spacing between lines */
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-family: "Co Headline Trial Bold", sans-serif;
+}
+
+
+.survey-deadline {
+    text-align: center; /* Center the text */
+    margin-top: 20px;  /* Add space above the text */
+    font-size: 18px;    /* Adjust font size as needed */
+    color: #46a7d4;     /* Set color to match your design */
+    font-family: "Co Headline Trial Bold", sans-serif; /* Use the same font as others */
+    white-space: nowrap; /* Prevent text from wrapping */
+    max-width: 100%;    /* Ensure it doesn't overflow the container */
+    overflow: hidden;    /* Hide any overflow */
+    text-overflow: ellipsis; /* Show ellipsis if the text overflows */
+}
+
+
+
+/* video section page -------------------------------- */
+
+#videoModal .modal-content {
+    background: transparent;
+    border: none;
+}
+.video-section {
+    text-align: center; /* Center the video section content */
+    margin-top: 40px; /* Add some space above the video section */
+}
+.video-overlay-container {
+    position: relative;
+    margin-bottom: 20px; /* Space below the overlay */
+}
+.video-overlay-container {
+    position: relative;
+    margin-bottom: 20px; /* Space below the overlay */
+}
+
+.video-overlay-container .text-layer-image {
+    width: 70%; /* Full width for the image */
+}
+
+.overlayed-text-video {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 40px; 
+    text-align: center;
+    font-family: "Co Headline Trial Bold", sans-serif;
+    letter-spacing: -1px;
+    color: #0a90cc;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+.video-player {
+    width: 80%; /* Full width for the video player */
+    max-width: 600px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the video player */
+}
+
+.share-quote-button {
+    margin-top: 5px; /* Adjust to a smaller value if needed */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Button font size */
+    display: block; /* Ensures the button behaves as a block element */
+    margin-left: auto; /* Center button */
+    margin-right: auto; /* Center button */
+    font-family: "Co Headline Trial Bold", sans-serif;
+    color: #0a90cc;
+}
+
+.btn-primary {
+    background-color: #0a90cc; /* Custom background color */
+    border: none;              /* Remove default border */
+    border-radius: 25px;      /* Adjust border radius for rounded corners */
+    width: 200px;              /* Set a specific width for the button */
+    padding: 10px;  
+    border-radius: 8px;
+    background-color: #0a90cc;          /* Add padding for a better appearance */
+}
+
+.btn-primary:hover {
+    background-color: #008bb5; /* Optional: Change color on hover */
+}
+
+
+
+/* profile page  -------------------------------- */
+
+.review-overlay-container {
+    position: relative;
+    text-align: center; /* Center the text */
+    max-width: 80%; /* Adjust this percentage to resize the image */
+    margin: 0 auto; /* Center the image */
+}
+
+.text-layer-image {
+    width: 70%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.overlayed-text-review {
+    font-size: 30px; /* Updated font size */
+    letter-spacing: -1px;
+    color: #46a7d4;     /* Set color to match your design */
+    font-family: "Co Headline Trial Bold", sans-serif; /* Use the same font as others */
+    font-weight: bold;
+    font-family: "Co Headline Trial Bold", sans-serif;
+    text-align: center; /* Center the text */
+    position: absolute; /* Position on top of the image */
+    top: 40%; /* Adjusted vertical position */
+    left: 50%; /* Horizontal center */
+    transform: translate(-50%, -50%); /* Centering the text */
+}
+
+.overlayed-text-review-message {
+    font-size: 20px; /* Updated font size */
+    letter-spacing: -1px; /* Same letter spacing */
+    color: #0a90cc; /* Same color */
+    font-weight: bold; /* Same font weight */
+    font-family: "Co Headline Trial Bold", sans-serif;
+    text-align: center; /* Center the text */
+    position: absolute; /* Position on top of the image */
+    top: 70%; /* Increased this value to create a gap */
+    left: 50%; /* Horizontal center */
+    transform: translate(-50%, -50%); /* Centering the text */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+
+
+.position-relative {
+    position: relative; /* Ensure the parent has relative positioning */
+}
+
+.text-layer-image2 {
+    max-width: 80%; /* Adjust to desired size (e.g., 80% of the container width) */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures that margins are applied correctly */
+    margin: 0 auto; /* Center the image */
+}
+
+.overlay-text {
+    position: absolute; /* Position text absolutely within the container */
+    top: 50%; /* Adjust this to move it vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text */
+    font-size: 30px; /* Set desired font size */
+    text-align: center; /* Center align the text */
+    font-family: "Co Headline Trial Bold", sans-serif;
+    letter-spacing: -1px;
+    color: #0a90cc;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.text-box {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 200px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+}

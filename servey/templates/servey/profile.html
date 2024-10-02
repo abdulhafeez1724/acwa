@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'servey/css/style.css' %}"> <!-- Link to the new CSS file -->
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="logo-container">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'servey/images/acwa.png' %}" alt="ACWA Logo" class="logo-large">
+            </a>
+            <a href="{% url 'home' %}">
+                <img src="{% static 'servey/images/logo.png' %}" alt="Rise Up Logo" class="logo-large">
+            </a>
+        </div>
+        
+        <div>
+            <div class="position-relative">
+                <img src="{% static 'servey/images/text_layer.png' %}" alt="Text Layer" class="text-layer-image2">
+                <div class="overlay-text">Rise Up and Make an Impact! <br> Voices of Our People </div>
+            </div>
+
+            <div class="container">
+                <div class="text-box">
+                    <p>ACWA Power is the best place to work.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Text Layer and form -->
+        <div>
+            <div class="position-relative">
+                <img src="{% static 'servey/images/text_layer.png' %}" alt="Text Layer" class="text-layer-image2">
+                <div class="overlay-text">So, what makes you a proud ACWA Power Employee?</div>
+            </div>
+            
+            <!-- Form Section -->
+            <div class="form-container">
+                <form id="profileForm" method="POST" action="{% url 'submit_profile' %}">
+                    {% csrf_token %}
+                    
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="fname">First Name:</label>
+                            <input type="text" id="fname" name="fname" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lname">Last Name:</label>
+                            <input type="text" id="lname" name="lname" class="form-control" required>
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="office">Office Location:</label>
+                        <input type="text" id="office" name="office" class="form-control" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="quote">Quote:</label>
+                        <textarea id="quote" name="quote" class="form-control" required></textarea>
+                    </div>
+            
+                    <!-- Center the button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+        document.getElementById('profileForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Show SweetAlert2 success message
+            Swal.fire({
+                title: 'Success!',
+                text: 'Your quote has been submitted.',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // If confirmed, submit the form programmatically
+                    this.submit();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
