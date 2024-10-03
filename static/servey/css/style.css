@@ -222,8 +222,11 @@ body, html {
         margin-bottom: 20px;
     }
 
-    .overlayed-textt, .overlayed-text-iphone, .overlayed-text-video {
+    .overlayed-textt, .overlayed-text-iphone  {
         font-size: 20px;
+    }
+    .overlayed-text-video {
+        font-size: 15px;
     }
 
     .share-quote-button {
