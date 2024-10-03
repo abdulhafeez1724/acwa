@@ -29,6 +29,27 @@ body, html {
     margin-bottom: 20px;
 }
 
+.reviews {
+    position: relative; /* Keep the container relative */
+    text-align: center; /* Center the text horizontally */
+    margin: 20px 0; /* Add some vertical spacing */
+}
+
+.reviews-image {
+    width: 50%; /* Make the image responsive */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.reviews-text {
+    position: absolute; /* Position text absolutely within the relative container */
+    top: 15%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to truly center the text */
+    color: #0a90cc; /* Change to your preferred text color */
+    font-size: 24px; /* Adjust as needed */
+    font-family: "Co Headline Trial Bold", sans-serif; /* Ensure font matches your design */
+}
+
 
 .position-relative {
     position: relative;
@@ -53,6 +74,8 @@ body, html {
     font-size: 23px !important;
     background-color: 0a90cc;
 }
+
+
 
 .profileForm{
     font-family: "Co Headline Trial Bold", sans-serif;
@@ -86,6 +109,40 @@ body, html {
     background-color: #0056b3;
 }
 
+
+.after-form {
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.after-form-image {
+    width: 60% !important; /* Increase the image size */
+    height: auto !important;
+    border-radius: 10px !important;
+}
+
+.overlay-text-after-form {
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-family: "Co Headline Trial Bold", sans-serif !important;
+    color: #0a90cc !important;
+    border-radius: 10px !important;
+    padding: 20px !important;
+}
+
+.overlay-text-after-form h3 {
+    margin-bottom: 10px !important;
+    font-size: 18px !important; /* Decreased h3 font size */
+}
+
+.overlay-text-after-form p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     .overlay-text {
@@ -111,7 +168,56 @@ body, html {
         padding: 15px;
         margin: 10px;
     }
+    .reviews-text {
+        font-size: 10px; /* Adjust the font size for mobile */
+        top: 3%; /* Center vertically */
+
+    }
+    .reviews-image {
+        width: 70%; /* Make the image responsive */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    .after-form {
+        position: relative;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .after-form-image {
+        width: 80% !important; /* Increased image size for mobile */
+        height: auto !important;
+    }
+
+    .overlay-text-after-form {
+        position: absolute;
+        top: 40% !important; /* Adjusted to show the text in a more centered way */
+        left: 50% !important;
+        transform: translate(-50%, -40%) !important; /* Center text on the image */
+        font-size: 12px !important; /* Adjusted text size */
+        color: #0a90cc !important;
+        padding: 10px !important;
+        width: 80% !important; /* Adjust width */
+    }
+
+    .overlay-text-after-form h3 {
+        font-size: 12px !important; /* Adjusted h3 size */
+        margin-bottom: 0px !important; /* Add some space below h3 */
+    }
+
+    .overlay-text-after-form p {
+        font-size: 5px !important; /* Text size for p */
+        line-height: 1.4 !important; /* Adjust line height for better readability */
+    }
+
 }
+
+.custom-text {
+    font-family: "Co Headline Trial Bold", sans-serif; /* Set font family */
+    color: #0a90cc; /* Set text color */
+    background-color: #f9f9f9;
+}
+
 
 /* Tablet Styles */
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -132,6 +238,43 @@ body, html {
     .form-group label {
         font-size: 1rem;
     }
+    .reviews-text {
+        font-size: 15px; /* Adjust the font size for tablets */
+        top: 10%;
+    }
+    .reviews-image {
+        width: 50%; /* Make the image responsive */
+        height: auto; /* Maintain the aspect ratio */
+    }
+    .after-form {
+        position: relative;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .after-form-image {
+        width: 65% !important; /* Image size for tablet */
+        height: auto !important;
+    }
+
+    .overlay-text-after-form {
+        position: absolute;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        font-size: 18px !important;
+        color: #0a90cc !important;
+        padding: 15px !important;
+        width: 70% !important;
+    }
+
+    .overlay-text-after-form h3 {
+        font-size: 15px !important; /* Adjusted h3 size */
+    }
+
+    .overlay-text-after-form p {
+        font-size: 8px !important;
+    }
 }
 
 /* Larger Screens */
@@ -151,5 +294,42 @@ body, html {
 
     .form-group label {
         font-size: 1rem;
+    }
+    .reviews-text {
+        font-size: 24px; /* Maintain the font size for larger screens */
+    }
+    .reviews-image {
+        width: 60%; /* Make the image responsive */
+        height: auto; /* Maintain the aspect ratio */
+    }
+    .after-form {
+        position: relative;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .after-form-image {
+        width: 60% !important; /* Image size for larger screens */
+        height: auto !important;
+    }
+
+    .overlay-text-after-form {
+        position: absolute;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        font-size: 20px !important;
+        color: #0a90cc !important;
+        padding: 20px !important;
+        width: 60% !important;
+    }
+
+    .overlay-text-after-form h3 {
+        font-size: 22px !important; /* Adjusted h3 size */
+        
+    }
+
+    .overlay-text-after-form p {
+        font-size: 10px !important;
     }
 }
