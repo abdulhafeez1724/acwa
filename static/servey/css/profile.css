@@ -146,7 +146,7 @@ body, html {
 /* Mobile Styles */
 @media (max-width: 768px) {
     .overlay-text {
-        font-size: 10px !important;
+        font-size: 8px !important;
         padding: 10px;
     }
 
@@ -169,7 +169,7 @@ body, html {
         margin: 10px;
     }
     .reviews-text {
-        font-size: 10px; /* Adjust the font size for mobile */
+        font-size: 9px; /* Adjust the font size for mobile */
         top: 3%; /* Center vertically */
 
     }
