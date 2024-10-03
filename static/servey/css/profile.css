@@ -271,8 +271,12 @@ body, html {
         font-size: 1rem;
     }
     .reviews-text {
-        font-size: 15px; /* Adjust the font size for tablets */
-        top: 10%;
+        font-size: 13px; /* Adjust the font size for tablets */
+        top: 8%;
+    }
+    .overlay-text {
+        font-size: 15px !important;
+        padding: 10px;
     }
     .reviews-image {
         width: 50%; /* Make the image responsive */
@@ -302,6 +306,8 @@ body, html {
 
     .overlay-text-after-form h3 {
         font-size: 15px !important; /* Adjusted h3 size */
+        padding-top: 10px !important;
+
     }
 
     .overlay-text-after-form p {
