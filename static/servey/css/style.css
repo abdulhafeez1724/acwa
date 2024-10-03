@@ -287,9 +287,9 @@ body, html {
         padding-left: 25%;
     }
     .overlayed-text-video{
-        font-size: 8px;
+        font-size: 12px;
         top: 10px;
-        left: 40px;
+        left: 80px;
         text-align: center;
         font-family: "Co Headline Trial Bold", sans-serif;
         color: #0a90cc;
